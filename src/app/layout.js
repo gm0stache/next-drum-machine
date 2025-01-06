@@ -1,14 +1,20 @@
-import React from 'react';
+"use client";
 
-import Header from '../components/Header';
+import React from "react";
 
-import './styles.css';
+import Header from "../components/Header";
+
+import "./styles.css";
+
+import SoundEnabledProvider from "../components/SoundEnabledProvider/SoundEnabledProvider";
 
 function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Header />
+        <SoundEnabledProvider>
+          <Header />
+        </SoundEnabledProvider>
         {children}
         <footer>
           <img src="/ie-badge.gif" width={100} />
